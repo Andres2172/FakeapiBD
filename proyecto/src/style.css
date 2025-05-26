@@ -1,0 +1,134 @@
+
+/* --- LOGIN Y FORMULARIO --- */
+.formulario {
+  background: rgba(34, 34, 34, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+  max-width: 350px;
+  margin: 40px auto;
+  padding: 2.5em 2em 1.5em 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.formulario h2 {
+  margin-bottom: 1.2em;
+  color: #646cff;
+  font-size: 2em;
+}
+.formulario input[type="email"],
+.formulario input[type="password"] {
+  width: 100%;
+  padding: 0.8em 1em;
+  margin-bottom: 1.2em;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background: #222;
+  color: #fff;
+  font-size: 1em;
+  transition: border-color 0.2s;
+}
+.formulario input:focus {
+  border-color: #646cff;
+  outline: none;
+}
+.formulario button {
+  width: 100%;
+  margin-bottom: 1em;
+  background: linear-gradient(90deg, #646cff 60%, #535bf2 100%);
+  color: #fff;
+  border: none;
+  font-size: 1.1em;
+  font-weight: 600;
+  padding: 0.8em 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(100,108,255,0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.formulario button:hover {
+  background: linear-gradient(90deg, #535bf2 60%, #646cff 100%);
+  box-shadow: 0 4px 16px rgba(100,108,255,0.15);
+}
+.formulario p {
+  margin-top: 0.5em;
+  color: #ccc;
+  font-size: 0.98em;
+}
+.formulario a {
+  color: #646cff;
+  text-decoration: underline;
+  font-weight: 500;
+}
+.formulario a:hover {
+  color: #535bf2;
+}
+
+/* --- CATÁLOGO DE AUTOS --- */
+#lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+  padding: 10px 0 30px 0;
+}
+#lista > div {
+  background: #181818;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+  padding: 1.2em 1em 1em 1em;
+  max-width: 170px;
+  min-width: 140px;
+  flex: 1 1 150px;
+  margin: 0.5em 0.2em;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+#lista > div:hover {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 6px 24px rgba(100,108,255,0.13);
+}
+#lista img {
+  border-radius: 8px;
+  margin-bottom: 0.7em;
+  background: #222;
+  object-fit: cover;
+  width: 100%;
+  min-height: 90px;
+  max-height: 110px;
+}
+#lista p {
+  margin: 0.2em 0;
+  color: #e0e0e0;
+  font-size: 1em;
+}
+#lista strong {
+  color: #646cff;
+}
+
+@media (max-width: 600px) {
+  .formulario {
+    max-width: 95vw;
+    padding: 1.2em 0.5em 1em 0.5em;
+  }
+  #lista {
+    gap: 10px;
+    padding: 5px 0 20px 0;
+  }
+  #lista > div {
+    max-width: 98vw;
+    min-width: 120px;
+    padding: 0.7em 0.3em 0.7em 0.3em;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
